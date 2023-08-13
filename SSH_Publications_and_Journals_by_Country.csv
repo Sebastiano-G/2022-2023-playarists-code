@@ -1,90 +1,91 @@
 Country,Journal_count,Publication_count
-United States,1161,2245731
-United Kingdom,1350,1605994
-Netherlands,539,721708
-Germany,247,167857
-Switzerland,49,127230
-France,199,100708
-Spain,809,76771
-Poland,786,54114
-Brazil,472,37335
-Turkey,247,33801
-Ukraine,270,29634
-Canada,60,27690
-Australia,38,24225
-Russia,216,23350
-Colombia,182,17227
-Italy,89,14672
-Belgium,77,14637
-Czechia,152,14605
-Norway,64,12380
-Serbia,117,11985
-Lithuania,55,10448
-Portugal,99,9045
-Romania,174,8193
-South Africa,21,7446
-Mexico,72,6775
-Sweden,29,6720
-Japan,8,5961
-Chile,106,5663
-Denmark,24,5516
-Slovenia,48,4961
-Argentina,135,4953
-Hungary,51,4722
-Bulgaria,38,4718
-Slovakia,65,4697
-New Zealand,4,4398
-Croatia,100,4326
-Finland,14,3891
-India,19,3833
-Peru,57,3545
-Ecuador,69,3373
-International,16,2578
-Israel,5,2426
-Venezuela,20,2287
-Costa Rica,41,2226
-Austria,26,1928
-Ireland,9,1315
-Luxembourg,1,1309
-Estonia,14,1279
-Indonesia,27,1173
-Iran,4,932
-Korea,4,857
-Latvia,14,810
-Bosnia and Herzegovina,37,691
-Algeria,2,668
-Cyprus,7,621
-Montenegro,8,610
-Greece,13,581
-Hong Kong,1,562
-Martinique,1,526
-Singapore,1,462
-China,4,405
-Bolivia,8,359
-Albania,2,312
-Dominican Republic,3,196
-Pakistan,8,194
-Nicaragua,6,189
-Uruguay,8,186
-Puerto Rico,4,180
-Armenia,7,179
-Macedonia,8,156
-Kazakhstan,6,152
-Georgia,5,151
-Guatemala,2,134
-Moldova,8,129
+United States,1221,2385504
+United Kingdom,1360,1654523
+Netherlands,544,832453
+Germany,252,172444
+Switzerland,51,135919
+France,200,104600
+Spain,815,81403
+Poland,798,57946
+Brazil,476,39306
+Turkey,252,35019
+Ukraine,273,30960
+Canada,63,28373
+Australia,39,24823
+Russia,219,24586
+Colombia,182,17954
+Italy,103,17410
+Czechia,155,14955
+Belgium,77,14807
+Norway,64,12605
+Serbia,117,12453
+Lithuania,55,10741
+Portugal,99,9399
+Romania,181,8617
+Japan,8,8080
+South Africa,21,7717
+Croatia,102,7587
+Mexico,74,7005
+Sweden,32,6906
+Chile,106,5895
+Denmark,24,5590
+Argentina,140,5278
+Slovenia,49,5152
+Bulgaria,39,4937
+Hungary,51,4902
+Slovakia,68,4805
+Finland,14,4572
+New Zealand,4,4434
+India,19,3958
+Peru,58,3792
+Ecuador,71,3594
+International,16,2766
+Israel,5,2456
+Venezuela,20,2363
+Costa Rica,41,2329
+Austria,27,2030
+Estonia,14,1366
+Ireland,10,1352
+Luxembourg,1,1317
+Indonesia,27,1277
+Iran,5,1147
+Korea,4,878
+Latvia,14,822
+Bosnia and Herzegovina,39,757
+Algeria,2,687
+Cyprus,7,659
+Montenegro,8,639
+Greece,13,616
+Hong Kong,1,573
+Martinique,1,529
+Singapore,1,463
+China,4,411
+Bolivia,8,381
+Albania,2,323
+Armenia,7,219
+Dominican Republic,3,205
+Nicaragua,6,205
+Pakistan,8,202
+Uruguay,8,195
+Puerto Rico,7,190
+Kazakhstan,6,169
+Georgia,5,166
+Macedonia,8,162
+Guatemala,2,148
+Moldova,9,143
 Guadeloupe,1,107
-United Arab Emirates,1,76
-Nepal,1,67
-Angola,1,57
-Panama,5,48
-Paraguay,4,42
-Iceland,2,21
-Dominica,1,20
-Azerbaijan,3,16
-Lebanon,1,13
-Cuba,1,13
-Egypt,1,10
-Honduras,1,8
-Malaysia,1,4
+United Arab Emirates,1,80
+Angola,1,75
+Nepal,1,74
+Panama,5,53
+Paraguay,4,47
+Iceland,2,23
+Dominica,1,22
+Azerbaijan,3,17
+Cuba,1,15
+Lebanon,1,14
+Egypt,1,11
+Honduras,1,10
+Malaysia,1,6
+Malta,1,4
 Iraq,1,1
