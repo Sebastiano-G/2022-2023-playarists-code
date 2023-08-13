@@ -15,21 +15,21 @@ def main(args):
     meta_coverage.process_files()
 
     print("##### Extracting Countries:")
-    countries = CountriesProcessor(meta_coverage)
+    countries = CountriesProcessor(meta_coverage, args.remove_megajournals)
     countries_dict = countries.create_countries_dict() 
     countries_dict, no_country_venues = countries_dict
-    result_countries = CountsProcessor(meta_coverage, "SSH_Publications_and_Journals_by_Country.csv")
+    result_countries = CountsProcessor(meta_coverage, "SSH_Publications_and_Journals_by_Country.csv", args.remove_megajournals,)
     result_countries = result_countries.counts(countries_dict, "Country")
     print("##### These venues have no country specified", no_country_venues) 
 
     print("##### Extracting Disciplines:")
-    disciplines = DisciplinesProcessor(meta_coverage)
+    disciplines = DisciplinesProcessor(meta_coverage, args.remove_megajournals)
     disciplines_dict = disciplines.create_disciplines_dict()
-    result_disciplines = CountsProcessor(meta_coverage, "SSH_Publications_by_Discipline.csv")
+    result_disciplines = CountsProcessor(meta_coverage, "SSH_Publications_by_Discipline.csv", args.remove_megajournals)
     result_disciplines = result_disciplines.counts(disciplines_dict, "Discipline")
     
     print("##### Comparing EU and US:")
-    us_eu = Compare_US_EU(meta_coverage)
+    us_eu = Compare_US_EU(meta_coverage, args.remove_megajournals)
     meta_coverage_us_eu= us_eu.compare_us_eu("ERIHPLUSapprovedJournals.csv", countries_dict) #returns a tuple with the two datasets
     meta_coverage_us, meta_coverage_eu, us_data, eu_data = meta_coverage_us_eu
     us_eu.counts_us_eu(disciplines_dict, "Discipline", meta_coverage_us, "compareUS_EU/us_disciplines_count.csv")
@@ -44,6 +44,7 @@ if __name__ == '__main__':
     parser.add_argument("--oc_meta", default="C:\\Users\\sebas\\Downloads\\csv\\csv_dump_oroci", type=str, required=False, help="path to the OpenCitations Meta dataset")
     parser.add_argument("--erih_plus", default="ERIHPLUSapprovedJournals.csv", type=str, required=False, help="path to the ERIH PLUS dataset")
     parser.add_argument("--doaj", default="journalcsv__doaj.csv", type=str, required=False, help="path to the DOAJ file")
+    parser.add_argument("--remove_megajournals", default=False, type=bool, required=False, help="exclude mega journals from analysis")
 
     args = parser.parse_args()
     main(args)

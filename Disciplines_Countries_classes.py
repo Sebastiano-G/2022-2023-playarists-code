@@ -6,17 +6,19 @@ from utils import load_data
 # ==================== PROCESSORS FOR RETRIEVING DISCIPLINES ======================= #
 
 class ResultsProcessor(object):
-    def __init__(self, meta_coverage, meta_coverage_processed_files): # takes in input a PlayaristProcessor object
+    def __init__(self, meta_coverage, remove_megajournals, meta_coverage_processed_files): # takes in input a PlayaristProcessor object
         self.meta_coverage = meta_coverage
         self.meta_df = pd.read_csv(meta_coverage_processed_files)
         self.erih_df = meta_coverage.get_erih_df()
         self.doaj_df = meta_coverage.get_doaj_df()   
+        self.remove_megajournals = remove_megajournals
+        
 
 
 
 class CountriesProcessor(ResultsProcessor):
-    def __init__(self, meta_coverage, meta_coverage_processed_files="SSH_Publications_in_OC_Meta_and_Open_Access_status.csv"): 
-        super().__init__(meta_coverage, meta_coverage_processed_files)
+    def __init__(self, meta_coverage, remove_megajournals=False, meta_coverage_processed_files="SSH_Publications_in_OC_Meta_and_Open_Access_status.csv"): 
+        super().__init__(meta_coverage, remove_megajournals, meta_coverage_processed_files)
         self.doaj_df = self.doaj_df[["Journal ISSN (print version)", "Journal EISSN (online version)", "Country of publisher"]] 
         self.unmatched_countries = []
 
@@ -50,8 +52,8 @@ class CountriesProcessor(ResultsProcessor):
 
 
 class DisciplinesProcessor(ResultsProcessor):
-    def __init__(self, meta_coverage, meta_coverage_processed_files="SSH_Publications_in_OC_Meta_and_Open_Access_status.csv"):
-        super().__init__(meta_coverage, meta_coverage_processed_files)
+    def __init__(self, meta_coverage, remove_megajournals=False, meta_coverage_processed_files="SSH_Publications_in_OC_Meta_and_Open_Access_status.csv"):
+        super().__init__(meta_coverage, remove_megajournals, meta_coverage_processed_files)
 
 
     def create_disciplines_dict(self): 
@@ -84,9 +86,9 @@ class DisciplinesProcessor(ResultsProcessor):
     
 class CountsProcessor(ResultsProcessor):
 
-    def __init__(self, meta_df, export_path, meta_coverage_processed_files="SSH_Publications_in_OC_Meta_and_Open_Access_status.csv"):
+    def __init__(self, meta_df, export_path, remove_megajournals=False, meta_coverage_processed_files="SSH_Publications_in_OC_Meta_and_Open_Access_status.csv"):
         self.export_path = export_path
-        super().__init__(meta_df, meta_coverage_processed_files)
+        super().__init__(meta_df, remove_megajournals, meta_coverage_processed_files)
 
 
     def counts(self, dictionary, label): #dictionary is a DisciplinesCountriesProcessor object
@@ -113,8 +115,8 @@ class CountsProcessor(ResultsProcessor):
 # ==================== US-EU comparison ====================== #
 
 class Compare_US_EU(ResultsProcessor):
-    def __init__(self, meta_coverage, meta_coverage_processed_files="SSH_Publications_in_OC_Meta_and_Open_Access_status.csv"): 
-        super().__init__(meta_coverage, meta_coverage_processed_files)
+    def __init__(self, meta_coverage, remove_megajournals=False,  meta_coverage_processed_files="SSH_Publications_in_OC_Meta_and_Open_Access_status.csv"): 
+        super().__init__(meta_coverage, remove_megajournals, meta_coverage_processed_files)
    
     
     def compare_us_eu(self, erih_ds, countries_dict):
